@@ -1,6 +1,7 @@
 # Computercraft Lua Programmierung
 
 [Tutorials - ComputerCraft Wiki](https://www.computercraft.info/wiki/Tutorials)
+![mindmap.jpg](https://res.craft.do/user/full/159935f9-5e4d-0afb-2c79-97ce3d2d9945/doc/63d4fe2e-a399-49c6-9889-0d6d3b3f8cff/2c86a1e3-d9e3-42fb-9394-3d23a05b00f6)
 
 ## Hello World
 
