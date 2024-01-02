@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.8.0/styles/default.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.6/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.15.6/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.15.6/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+                const markmap = getMarkmap();
+                window.mm = markmap.Markmap.create(
+                  "svg#mindmap",
+                  (getOptions || markmap.deriveOptions)(jsonOptions),
+                  root2
+                );
+              })(() => window.markmap,null,{"type":"heading","depth":0,"payload":{"lines":[0,1]},"content":"Computercraft Lua Programmierung","children":[{"type":"heading","depth":1,"payload":{"lines":[4,5]},"content":"Hello World","children":[]},{"type":"heading","depth":1,"payload":{"lines":[8,9]},"content":"Variablen","children":[]},{"type":"heading","depth":1,"payload":{"lines":[14,15]},"content":"If, Then, Else","children":[{"type":"fence","depth":2,"content":"<pre><code class=\"language-lua\"><span class=\"hljs-keyword\">if</span> energyLevel &gt; <span class=\"hljs-number\">50</span> <span class=\"hljs-keyword\">then</span>\n  <span class=\"hljs-built_in\">print</span>(<span class=\"hljs-string\">&quot;Energy level is high&quot;</span>)\n<span class=\"hljs-keyword\">else</span>\n  <span class=\"hljs-built_in\">print</span>(<span class=\"hljs-string\">&quot;Energy level is low&quot;</span>)\n<span class=\"hljs-keyword\">end</span>\n</code></pre>\n","children":[],"payload":{"lines":[18,25]}}]},{"type":"heading","depth":1,"payload":{"lines":[26,27]},"content":"function","children":[{"type":"fence","depth":2,"content":"<pre><code class=\"language-lua\"><span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span> <span class=\"hljs-title\">greetPlayer</span><span class=\"hljs-params\">(name)</span></span>\n  <span class=\"hljs-built_in\">print</span>(<span class=\"hljs-string\">&quot;Hello, &quot;</span> .. name)\n<span class=\"hljs-keyword\">end</span>\n</code></pre>\n","children":[],"payload":{"lines":[30,35]}}]},{"type":"heading","depth":1,"payload":{"lines":[36,37]},"content":"Schleifen","children":[{"type":"heading","depth":2,"payload":{"lines":[40,41]},"content":"<strong>for</strong>","children":[{"type":"fence","depth":3,"content":"<pre><code class=\"language-lua\"><span class=\"hljs-keyword\">for</span> i = <span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">5</span> <span class=\"hljs-keyword\">do</span>\n  <span class=\"hljs-built_in\">print</span>(i)\n<span class=\"hljs-keyword\">end</span>\n</code></pre>\n","children":[],"payload":{"lines":[44,49]}},{"type":"fence","depth":3,"content":"<pre><code class=\"language-lua\"><span class=\"hljs-keyword\">local</span> fruits = {<span class=\"hljs-string\">&quot;apple&quot;</span>, <span class=\"hljs-string\">&quot;banana&quot;</span>, <span class=\"hljs-string\">&quot;orange&quot;</span>}\n<span class=\"hljs-keyword\">for</span> key, value <span class=\"hljs-keyword\">in</span> <span class=\"hljs-built_in\">pairs</span>(fruits) <span class=\"hljs-keyword\">do</span>\n  <span class=\"hljs-built_in\">print</span>(value)\n<span class=\"hljs-keyword\">end</span>\n</code></pre>\n","children":[],"payload":{"lines":[52,58]}}]},{"type":"heading","depth":2,"payload":{"lines":[61,62]},"content":"<strong>while</strong>","children":[{"type":"fence","depth":3,"content":"<pre><code class=\"language-lua\"><span class=\"hljs-keyword\">local</span> count = <span class=\"hljs-number\">1</span>\n<span class=\"hljs-keyword\">while</span> count &lt;= <span class=\"hljs-number\">5</span> <span class=\"hljs-keyword\">do</span>\n  <span class=\"hljs-built_in\">print</span>(count)\n  count = count + <span class=\"hljs-number\">1</span>\n<span class=\"hljs-keyword\">end</span>\n</code></pre>\n","children":[],"payload":{"lines":[67,74]}}]}]},{"type":"heading","depth":1,"payload":{"lines":[77,78]},"content":"Table","children":[{"type":"heading","depth":2,"payload":{"lines":[81,82]},"content":"Tabellen erstellen","children":[{"type":"fence","depth":3,"content":"<pre><code class=\"language-lua\"><span class=\"hljs-keyword\">local</span> fruits = {<span class=\"hljs-string\">&quot;apple&quot;</span>, <span class=\"hljs-string\">&quot;banana&quot;</span>, <span class=\"hljs-string\">&quot;orange&quot;</span>}\n</code></pre>\n","children":[],"payload":{"lines":[85,88]}}]},{"type":"heading","depth":2,"payload":{"lines":[91,92]},"content":"Auf Elemente in einer Tabelle zugreifen","children":[{"type":"fence","depth":3,"content":"<pre><code class=\"language-lua\"><span class=\"hljs-built_in\">print</span>(fruits[<span class=\"hljs-number\">2</span>]) <span class=\"hljs-comment\">-- Gibt &quot;banana&quot; aus</span>\n</code></pre>\n","children":[],"payload":{"lines":[95,98]}}]},{"type":"heading","depth":2,"payload":{"lines":[99,100]},"content":"Tabellen durchlaufen","children":[{"type":"fence","depth":3,"content":"<pre><code class=\"language-lua\"><span class=\"hljs-keyword\">for</span> key, value <span class=\"hljs-keyword\">in</span> <span class=\"hljs-built_in\">pairs</span>(fruits) <span class=\"hljs-keyword\">do</span>\n  <span class=\"hljs-built_in\">print</span>(value)\n<span class=\"hljs-keyword\">end</span>\n</code></pre>\n","children":[],"payload":{"lines":[103,108]}}]},{"type":"heading","depth":2,"payload":{"lines":[111,112]},"content":"Tabellen als assoziative Arrays","children":[{"type":"fence","depth":3,"content":"<pre><code class=\"language-lua\"><span class=\"hljs-keyword\">local</span> person = {name=<span class=\"hljs-string\">&quot;John&quot;</span>, age=<span class=\"hljs-number\">30</span>, city=<span class=\"hljs-string\">&quot;New York&quot;</span>}\n<span class=\"hljs-built_in\">print</span>(person[<span class=\"hljs-string\">&quot;age&quot;</span>]) <span class=\"hljs-comment\">-- Gibt 30 aus</span>\n</code></pre>\n","children":[],"payload":{"lines":[115,119]}}]}]},{"type":"heading","depth":1,"payload":{"lines":[124,125]},"content":"Klassen","children":[{"type":"heading","depth":2,"payload":{"lines":[130,131]},"content":"Klassenähnliche Strukturen mit Tabellen und Metatables","children":[{"type":"heading","depth":3,"payload":{"lines":[134,135]},"content":"Schritt 1: Definieren der Klasse","children":[{"type":"fence","depth":4,"content":"<pre><code class=\"language-lua\"><span class=\"hljs-keyword\">local</span> Animal = {\n  name = <span class=\"hljs-string\">&quot;&quot;</span>,\n  sound = <span class=\"hljs-string\">&quot;&quot;</span>,\n  makeSound = <span class=\"hljs-function\"><span class=\"hljs-keyword\">function</span><span class=\"hljs-params\">(self)</span></span>\n    <span class=\"hljs-built_in\">print</span>(<span class=\"hljs-built_in\">self</span>.sound)\n  <span class=\"hljs-keyword\">end</span>\n}\n</code></pre>\n","children":[],"payload":{"lines":[138,147]}}]},{"type":"heading","depth":3,"payload":{"lines":[148,149]},"content":"Schritt 2: Erstellen von Instanzen","children":[{"type":"fence","depth":4,"content":"<pre><code class=\"language-lua\"><span class=\"hljs-keyword\">local</span> cat = {name = <span class=\"hljs-string\">&quot;Whiskers&quot;</span>, sound = <span class=\"hljs-string\">&quot;Meow&quot;</span>}\n<span class=\"hljs-built_in\">setmetatable</span>(cat, {<span class=\"hljs-built_in\">__index</span> = Animal})\n</code></pre>\n","children":[],"payload":{"lines":[152,156]}}]},{"type":"heading","depth":3,"payload":{"lines":[157,158]},"content":"Schritt 3: Verwendung von Instanzen","children":[{"type":"fence","depth":4,"content":"<pre><code class=\"language-lua\"><span class=\"hljs-built_in\">print</span>(cat.name) <span class=\"hljs-comment\">-- Gibt &quot;Whiskers&quot; aus</span>\ncat:makeSound() <span class=\"hljs-comment\">-- Gibt &quot;Meow&quot; aus</span>\n</code></pre>\n","children":[],"payload":{"lines":[161,165]}}]}]}]}]},{})</script>
+</body>
+</html>
